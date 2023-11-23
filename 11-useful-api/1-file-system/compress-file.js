@@ -1,7 +1,9 @@
-import { getFileInfo } from "./lib/get-file-info.js";
 import path from "path";
 import { fileURLToPath } from "url";
 import { readFile, writeFile } from "fs/promises";
+
+// * Library
+import { getFileInfo } from "./lib/get-file-info.js";
 
 const __filename = fileURLToPath(import.meta.url);
 

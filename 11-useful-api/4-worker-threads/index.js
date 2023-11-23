@@ -1,7 +1,9 @@
-import { Worker } from "worker_threads";
+// Other Resources: https://www.digitalocean.com/community/tutorials/how-to-use-multithreading-in-node-js
+
 import chalk from "chalk";
-import { fileURLToPath } from "url";
+import { Worker } from "worker_threads";
 import { dirname, sep } from "path";
+import { fileURLToPath } from "url";
 
 // * Libraries
 import diceRoller from "./lib/dice-roller.js";

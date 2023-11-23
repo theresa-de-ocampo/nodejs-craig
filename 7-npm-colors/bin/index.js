@@ -20,7 +20,7 @@ while (sendMessage) {
     chalk.blue("\nWhat color do you want to use?\n    ")
   );
 
-  console.log(`\n${chalk[color.toLocaleLowerCase()](message)}\n`);
+  console.log(`\n${chalk[color.toLowerCase()](message)}\n`);
 
   const repeat = await prompt.question(
     chalk.blue("Do another? [Y] Yes or [N] No\n    ")
