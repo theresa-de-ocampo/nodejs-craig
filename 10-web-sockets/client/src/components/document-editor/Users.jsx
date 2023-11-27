@@ -15,9 +15,16 @@ export default function Users() {
 
   const users = Object.values(lastJsonMessage?.data.users || {});
 
-  return users.map((user) => (
-    <div key={user.username}>
-      <Avatar name={user.username} size={40} round="20px" />
-    </div>
-  ));
+  return (
+    <section id="users">
+      {users.map((user) => (
+        <Avatar
+          key={user.username}
+          name={user.username}
+          size={40}
+          round="20px"
+        />
+      ))}
+    </section>
+  );
 }

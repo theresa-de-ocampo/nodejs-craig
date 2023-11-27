@@ -15,10 +15,12 @@ export default function History() {
   const activities = lastJsonMessage?.data.userActivity || [];
 
   return (
-    <ul>
-      {activities.map((activity, i) => (
-        <li key={`activity-${i}`}>{activity}</li>
-      ))}
-    </ul>
+    <section id="history">
+      <ul>
+        {activities.map((activity, i) => (
+          <li key={`activity-${i}`}>{activity}</li>
+        ))}
+      </ul>
+    </section>
   );
 }

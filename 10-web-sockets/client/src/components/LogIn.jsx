@@ -15,8 +15,6 @@ export default function LogIn({ onLogIn }) {
       return;
     }
 
-    console.log(username);
-
     onLogIn(username);
   }
 

@@ -5,9 +5,9 @@ import History from "./History";
 export default function DocumentEditor() {
   return (
     <>
-      {/* <Users /> */}
+      <Users />
       <Document />
-      {/* <History /> */}
+      <History />
     </>
   );
 }

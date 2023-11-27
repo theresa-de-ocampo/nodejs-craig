@@ -10,12 +10,8 @@
 }
 
 body {
-  margin: 100px 20%;
-}
-
-main {
-  margin: 20px auto;
-  max-width: 100ch;
+  margin: 50px;
+  max-width: 120ch;
 }
 
 code {
@@ -25,4 +21,22 @@ code {
 
 button {
   margin: 2ch;
+}
+
+#users {
+  margin: 20px 0;
+  display: flex;
+  gap: 7px;
+}
+
+.rsw-ce {
+  height: 200px;
+}
+
+#history {
+  margin: 20px 0;
+  padding: 10px 40px;
+  background-color: lightgray;
+  max-height: 400px;
+  overflow-y: auto;
 }

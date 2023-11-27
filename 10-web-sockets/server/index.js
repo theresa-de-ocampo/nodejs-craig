@@ -35,7 +35,7 @@ wsServer.on("connection", (connection) => {
   console.log(`${userId} connected.`);
 
   connection.on("message", (message) => handleMessage(message, userId));
-  connection.on("message", () => handleDisconnect(userId));
+  connection.on("close", () => handleDisconnect(userId));
 });
 
 function broadcastMessage(json) {
@@ -48,9 +48,10 @@ function broadcastMessage(json) {
   }
 }
 
-function handleMessage(bufferMeesage, userId) {
-  const dataFromClient = JSON.parse(bufferMeesage.toString());
+function handleMessage(bufferMessage, userId) {
+  const dataFromClient = JSON.parse(bufferMessage.toString());
   const json = { type: dataFromClient.type };
+
   if (dataFromClient.type === EVENTS.USER) {
     users[userId] = dataFromClient;
     userActivity.push(`${dataFromClient.username} joined to edit the document`);
@@ -59,6 +60,8 @@ function handleMessage(bufferMeesage, userId) {
     editorContent = dataFromClient.content;
     json.data = { editorContent, userActivity };
   }
+
+  broadcastMessage(json);
 }
 
 function handleDisconnect(userId) {
