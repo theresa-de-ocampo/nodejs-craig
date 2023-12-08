@@ -43,7 +43,7 @@ const option2 = {
   all: true
 };
 
-dns.lookup("geeksforgeeks.org", option2, (err, address, family) => {
+dns.lookup("geeksforgeeks.org", option2, (err, address) => {
   if (err) {
     console.log(err);
   } else {
@@ -52,7 +52,7 @@ dns.lookup("geeksforgeeks.org", option2, (err, address, family) => {
 });
 
 /**
- * The `dns.lookup` function uses the oeprating system's facilities for DNS resolution, and may not
+ * The `dns.lookup` function uses the operating system's facilities for DNS resolution, and may not
  * necessarily perform direct communication itself.
  *
  * When you make a DNS lookup, Node.js interfaces with the underlying operating system, and the

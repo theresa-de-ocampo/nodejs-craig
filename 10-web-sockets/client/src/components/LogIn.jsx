@@ -22,7 +22,11 @@ export default function LogIn({ onLogIn }) {
     <section>
       <h2>Log In</h2>
       <form>
-        <input name="username" onInput={(e) => setUsername(e.target.value)} />
+        <input
+          name="username"
+          value={username}
+          onInput={(e) => setUsername(e.target.value)}
+        />
         <button type="button" onClick={logInUser}>
           Join
         </button>
