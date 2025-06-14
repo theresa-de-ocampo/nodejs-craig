@@ -1,0 +1,16 @@
+{
+  "name": "3-stackoverflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-readable-stream-demo.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Teriz De Ocampo",
+  "license": "ISC"
+}
